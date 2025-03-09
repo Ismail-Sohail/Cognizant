@@ -1,0 +1,7 @@
+# Ignore macOS system files
+.DS_Store
+
+# Ignore SSH keys (VERY IMPORTANT)
+ssh_key
+ssh_key.pub
+
