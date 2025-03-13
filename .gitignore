@@ -5,3 +5,11 @@
 ssh_key
 ssh_key.pub
 
+# data
+/intro-to-genai/data
+
+#virtual environment
+/cognizant_projects
+
+#environment
+.env
