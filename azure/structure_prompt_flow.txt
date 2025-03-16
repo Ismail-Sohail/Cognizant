@@ -1,0 +1,59 @@
+Steps Involved in Building an LLM Application with Prompt Flow
+Building an LLM (Large Language Model) application using prompt flow involves several key steps. Here’s an outline of the process, considering a customer support chatbot as the use case:
+
+1. Define the Use Case:
+In this case, the chatbot will assist customers by answering frequently asked questions (FAQs), handling basic support queries, and providing information on products or services.
+
+2. Data Collection:
+Gather a dataset of customer queries and responses (FAQs, support tickets, live chat data). This will help in defining the prompts and training the model.
+
+3. Design Inputs and Prompts:
+Inputs: The user query (text input) such as "What are your business hours?" or "How can I return an item?"
+Prompts: Predefined instructions for the model to understand the task. Example:
+"You are a customer support assistant. Please respond to the query in a friendly, professional manner."
+"Answer this question: {user_query}. Use the FAQ database if necessary."
+Outputs: The model’s response, such as "Our business hours are from 9 AM to 5 PM, Monday through Friday" or "You can return the item by visiting our returns portal."
+4. Integration/API Setup:
+To build a fully functional chatbot, you may need several integrations or APIs:
+
+LLM API (e.g., OpenAI GPT, Azure OpenAI, Hugging Face): To generate natural language responses based on user queries.
+Knowledge Base API: Integrate a knowledge base (could be a database, FAQ system, or document management system) for answering questions based on stored information.
+Conversation Management API: For managing the flow of conversations (context tracking, maintaining conversation history).
+Backend APIs: For performing actions such as user authentication, order tracking, ticket generation, etc.
+Analytics API: For tracking usage, sentiment analysis, and continuous model improvement.
+5. Fine-Tuning the Model:
+If the pre-trained LLM doesn’t perform well in the specific customer support domain, you can fine-tune it using domain-specific data. Fine-tuning the model ensures that it better understands the context and language of your industry.
+
+6. Testing and Iteration:
+Test the chatbot with real user queries to evaluate its performance. Check if the outputs are relevant, coherent, and helpful. Iteratively refine the prompts and model.
+
+7. Deployment:
+Deploy the application on a web platform or integrate it into your existing support channels (e.g., website chat, social media, or mobile app).
+
+8. Monitoring and Maintenance:
+Track chatbot performance using metrics like response accuracy, user satisfaction, and engagement. Continuously update the model with new data or feedback.
+
+Summary:
+In this customer support chatbot use case, the inputs are user queries, the prompts guide the model to respond accurately, and the outputs are the chatbot’s responses. Integrations required include APIs for LLM models, knowledge bases, conversation management, backend functionalities, and analytics. Proper use of prompt flow and API integration ensures a smooth user experience while maintaining accurate and relevant responses.
+
+Case Study Activity: Content Generation Tool Prototype using Azure’s Visual Editor
+Overview:
+For this case study, I designed a prototype for a content generation tool using Azure’s visual editor that accepts a user-provided topic and generates a blog post draft. Below is a breakdown of the components in the prompt flow.
+
+Components of the Prompt Flow:
+Input Nodes:
+
+User Topic Input: The user inputs a topic (e.g., "AI in Healthcare") through a text input node. This serves as the starting point for generating the blog post.
+Model Nodes:
+
+LLM Model: The input text is passed to a pre-trained large language model (LLM), such as Azure OpenAI GPT or T5, via an API integration node. This node processes the user-provided topic and generates relevant content for a blog post. The model uses a defined prompt like, "Write a detailed blog post about {user_topic}."
+Output Nodes:
+
+Draft Display: Once the model generates the content, the draft is returned and displayed to the user in an editable text box or webpage.
+Reflection on Challenges:
+While designing the content generation tool, one of the main challenges was ensuring the model generated relevant and coherent content based on the user topic. Pre-trained LLMs can sometimes produce text that is overly general or lacks depth. To overcome this, I fine-tuned the model using domain-specific data (e.g., articles on AI in Healthcare) to ensure more focused and useful outputs. Azure’s visual editor made it easy to set up the flow and integrate the model API, but testing different prompt configurations was essential to optimize the quality of the generated blog posts.
+
+
+Monitoring metrics like latency and error rates is essential for improving the user experience of an LLM application. Latency, or the response time, directly affects how quickly users receive answers or results, impacting user satisfaction. High latency can lead to frustration and abandonment, especially in real-time applications like chatbots or content generation tools. Error rates track how often the system fails to provide a correct or meaningful response, indicating potential issues with the model or infrastructure.
+
+In Azure, tools like Azure Monitor and Application Insights allow real-time tracking of these metrics. Azure Monitor provides detailed insights into performance metrics, including latency, while Application Insights can automatically capture exceptions and error rates, offering drill-down capabilities for deeper troubleshooting. Additionally, using Azure Log Analytics helps in analyzing large sets of logs to identify bottlenecks or recurring issues. By continuously monitoring these metrics, teams can quickly address performance issues, optimize model outputs, and enhance the overall user experience.
